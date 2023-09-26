@@ -11,7 +11,7 @@
     const spec = {
       "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
       "title": "CO2 Emissions Per Capitia For Australian States (2017)",
-      "width": 800,
+      "width": 1000,
       "height": 400,
       "data": {
         "url": "australian-states.min.json",
@@ -35,8 +35,9 @@
             "color": {
               "field": "CO2e emissions (tonnes per capita)",
               "type": "quantitative",
-              "title": "CO2 Emissions (tonnes per capita)",
-              "scale": {"type": "linear", "domain": [0, 70], "range": ["white", "red"]}
+              "title": "Tonnes per Capita",
+
+              "scale": {"type": "linear", "domain": [5, 70], "range": ["white", "red"]}
             },
             "tooltip": [
               {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
