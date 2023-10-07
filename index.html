@@ -33,13 +33,16 @@
           "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 1},
           "encoding": {
             "color": {
-              "field": "CO2e emissions (tonnes per capita)",
-              "type": "quantitative",
-              "title": "Tonnes per Capita",
-
-              "scale": {"type": "linear", "domain": [5, 70], "range": ["white", "red"]}
-            },
-            "tooltip": [
+  "field": "CO2e emissions (tonnes per capita)",
+  "type": "quantitative",
+  "title": "Tonnes per Capita",
+  "scale": {
+    "scheme": "yelloworangered",
+    "domain": [0,5,20, 30,40, 50, 60, 70]
+    
+  }
+},
+          "tooltip": [
               {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
               {"field": "CO2e emissions (tonnes per capita)", "type": "quantitative", "title": "CO2 Emissions (tonnes per capita)"}
             ]
