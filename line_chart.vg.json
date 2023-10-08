@@ -13,7 +13,7 @@
           "fields": ["State"],
           "bind": {
                 "input": "select", 
-                "options": [null,"New South Wales", " Victoria  ", " Queensland ", " South Australia  ", " Western Australia  ", " Tasmania ", " Australian Capital Territory ", " Northern Territory "],
+                "options": [null,"New South Wales", " Victoria  ", " Queensland ", " South Australia  ", " Western Australia ", " Tasmania ", " Australian Capital Territory ", " Northern Territory "],
                 "labels": ["Show all", "New South Wales", "Victoria", "Queensland", "South Australia", "Western Australia", "Tasmania", "Australian Capital Territory", "Northern Territory"],
                 "name": "State:"
           }
