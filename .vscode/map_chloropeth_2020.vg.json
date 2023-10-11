@@ -1,8 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "CO2 Emissions Per Capitia For Australian States (2017)",
-    "width": 1000,
+    "title": "CO2 Emissions Per Capitia For Australian States 2020",
+    "width": 500,
     "height": 400,
+    "background":"#fbfbf3",
     "data": {
       "url": "australian-states.min.json",
       "format": {"type": "topojson", "feature": "australian-states.min"}
@@ -17,24 +18,25 @@
         "transform": [
           {
             "lookup": "properties.STATE_NAME",
-            "from": {"data": {"url": "aus_CO2_data_2017.csv"}, "key": "State", "fields": ["CO2e emissions (tonnes per capita)"]}
+            "from": {"data": {"url": "aus_CO2_data_2020.csv"}, "key": "State", "fields": ["CO2 emissions (tonnes per capita)"]}
           }
         ],
         "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 1},
         "encoding": {
           "color": {
-"field": "CO2e emissions (tonnes per capita)",
+"field": "CO2 emissions (tonnes per capita)",
 "type": "quantitative",
 "title": "Tonnes per Capita",
+
 "scale": {
   "scheme": "yelloworangered",
-  "domain": [0,5,20, 30,40, 50, 60, 70]
+  "domain": [-5,0,5,10,20,30, 40, 50, 60,70,80,90,100,120]
   
 }
 },
         "tooltip": [
             {"field": "properties.STATE_NAME", "type": "nominal", "title": "State"},
-            {"field": "CO2e emissions (tonnes per capita)", "type": "quantitative", "title": "CO2 Emissions (tonnes per capita)"}
+            {"field": "CO2 emissions (tonnes per capita)", "type": "quantitative", "title": "CO2 Emissions (tonnes per capita)"}
           ]
         }
       }
